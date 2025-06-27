@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DutyFixit - Find Workers</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  
+</head>
+  
+<body>
+  <header>
+    <h1>DutyFixit - Find Trusted Workers</h1>
+    <div class="district-select">
+      <label for="districts">Select District:</label>
+      <select id="districts" onchange="loadWorkers()">
+        <option value="">Choose Location</option>
+        <option value="ariyalur">Ariyalur</option>
+        <option value="chengalpattu">Chengalpattu</option>
+        <option value="chennai">Chennai</option>
+        <option value="coimbatore">Coimbatore</option>
+        <option value="cuddalore">Cuddalore</option>
+        <option value="dharmapuri">Dharmapuri</option>
+        <option value="dindigul">Dindigul</option>
+        <option value="erode">Erode</option>
+        <option value="kallakurichi">Kallakurichi</option>
+        <option value="kancheepuram">Kancheepuram</option>
+        <option value="kanniyakumari">Kanniyakumari</option>
+        <option value="karur">Karur</option>
+        <option value="krishnagiri">Krishnagiri</option>
+        <option value="madurai">Madurai</option>
+        <option value="nagapattinam">Nagapattinam</option>
+        <option value="namakkal">Namakkal</option>
+        <option value="nilgiris">Nilgiris</option>
+        <option value="perambalur">Perambalur</option>
+        <option value="pudukkottai">Pudukkottai</option>
+        <option value="ramanathapuram">Ramanathapuram</option>
+        <option value="ranipet">Ranipet</option>
+        <option value="salem">Salem</option>
+        <option value="sivaganga">Sivaganga</option>
+        <option value="tenkasi">Tenkasi</option>
+        <option value="thanjavur">Thanjavur</option>
+        <option value="theni">Theni</option>
+        <option value="thoothukudi">Thoothukudi</option>
+        <option value="tiruchirapalli">Tiruchirapalli</option>
+        <option value="tirunelveli">Tirunelveli</option>
+        <option value="tirupathur">Tirupathur</option>
+        <option value="tiruppur">Tiruppur</option>
+        <option value="tiruvallur">Tiruvallur</option>
+        <option value="tiruvannamalai">Tiruvannamalai</option>
+        <option value="tiruvarur">Tiruvarur</option>
+        <option value="vellore">Vellore</option>
+        <option value="viluppuram">Viluppuram</option>
+        <option value="virudhunagar">Virudhunagar</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section id="workers-list">
+      <h2>Select a District to View Available Workers</h2>
+      <div id="workers-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 DutyFixit. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
+    
+        

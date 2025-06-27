@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DutyFixit - Signup</title>
+  <link rel="stylesheet" href="signup.css"/>
+  
+</head>
+<body>
+  <div class="container">
+    <h1>DutyFixit</h1>
+
+    <div class="switcher">
+      <button id="clientBtn" class="active">Client</button>
+      <button id="workerBtn">Worker</button>
+    </div>
+
+    <!-- Client Form -->
+    <form id="clientForm" class="form active" action="signup.php" method="POST" enctype="multipart/form-data">
+      
+      <input type="hidden" name="role" value="client">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="location" placeholder="Location" required>
+      <input type="text" name="address" placeholder="Address" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Sign Up as Client</button>
+    </form>
+
+    <!-- Worker Form -->
+    <form id="workerForm" class="form" action="signup.php" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="role" value="worker">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="domain" placeholder="Domain of Work (e.g. Plumber)" required>
+      <input type="number" name="experience" placeholder="Years of Experience" required>
+      <input type="file" id="profilePhoto" name="image" placeholder="Profile photo"accept="image/*" required>
+      <input type="text" name="location" placeholder="Location" required>
+      <input type="text" name="address" placeholder="Address" required>
+      
+      
+      
+
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Sign Up as Worker</button>
+    </form>
+
+    <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+  <form action="signup.php" method="POST">
+
+
+  <script>
+    const clientBtn = document.getElementById('clientBtn');
+    const workerBtn = document.getElementById('workerBtn');
+    const clientForm = document.getElementById('clientForm');
+    const workerForm = document.getElementById('workerForm');
+
+    clientBtn.addEventListener('click', () => {
+      clientBtn.classList.add('active');
+      workerBtn.classList.remove('active');
+      clientForm.classList.add('active');
+      workerForm.classList.remove('active');
+    });
+
+    workerBtn.addEventListener('click', () => {
+      workerBtn.classList.add('active');
+      clientBtn.classList.remove('active');
+      workerForm.classList.add('active');
+      clientForm.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
